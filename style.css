@@ -781,3 +781,51 @@ body {
 }
 a.chip.paper-link { text-decoration: none; display: inline-block; }
 a.chip.paper-link:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ============================
+   MOBILE FIXES + HAMBURGER (2026-11-06)
+   - no horizontal overflow on phones (long headings / paper chips / raw text strings)
+   - units sidebar collapses behind a hamburger on <=900px
+   ============================ */
+html, body { overflow-x: clip; }
+.page-layout, .main-content { min-width: 0; }
+.site-title, .unit-title { overflow-wrap: anywhere; }
+.unit-title { min-width: 0; }
+.q-body p, .q-body li { overflow-wrap: anywhere; }
+.papers-strip { max-width: 100%; }
+a.chip.paper-link {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  line-height: 1.35;
+  text-align: left;
+}
+.sidebar-header { display: flex; align-items: center; }
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav-toggle:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 900px) {
+  .nav-toggle { display: inline-flex; }
+  .sidebar .unit-nav { display: none; }
+  .sidebar.open .unit-nav { display: flex; }
+}
+@media (max-width: 600px) {
+  .site-title { font-size: 1.55rem; line-height: 1.18; }
+  .unit-header { flex-wrap: wrap; }
+  .unit-count { margin-left: 0; }
+  a.chip.paper-link { font-size: 0.72rem; padding: 0.3rem 0.6rem; }
+}

@@ -213,3 +213,23 @@
   applyFilters();
 
 })();
+
+  // Hamburger: collapse/expand the units sidebar on mobile
+  const navToggle = document.getElementById('navToggle');
+  const sidebarEl = document.getElementById('sidebar');
+  if (navToggle && sidebarEl) {
+    navToggle.addEventListener('click', () => {
+      const open = sidebarEl.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.textContent = open ? '\u2715' : '\u2630';
+    });
+    document.querySelectorAll('.nav-item').forEach(a => {
+      a.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+          sidebarEl.classList.remove('open');
+          navToggle.textContent = '\u2630';
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
