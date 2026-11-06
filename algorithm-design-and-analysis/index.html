@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECAP538 – Algorithm Design and Analysis | Question Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .site-header::after { content: 'DECAP538'; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="back-link"><span class="back-arrow">←</span> Back to Portal</a>
+      <div class="header-badge">DECAP538</div>
+      <h1 class="site-title">Algorithm Design<br>and Analysis</h1>
+      <p class="site-subtitle">Question Bank — Organized by 14 Units · 4 Papers (incl. GD Infotech)</p>
+      <div class="paper-legend">
+        <span class="legend-label">Papers:</span>
+        <span class="tag tag-p1">DECAP538</span>
+        <span class="tag tag-p2">CAP538</span>
+        <span class="tag tag-p3">DECAP538 QB</span>
+        <span class="tag tag-p4">GD Infotech ✦</span>
+      </div>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header"><span class="sidebar-icon">📚</span><span>Units</span></div>
+      <nav class="unit-nav" id="unitNav">
+        <a href="#unit1" class="nav-item active" data-unit="1"><span class="nav-num">01</span><span class="nav-text">Introduction</span></a>
+<a href="#unit2" class="nav-item" data-unit="2"><span class="nav-num">02</span><span class="nav-text">Divide and Conquer</span></a>
+<a href="#unit3" class="nav-item" data-unit="3"><span class="nav-num">03</span><span class="nav-text">Greedy Method</span></a>
+<a href="#unit4" class="nav-item" data-unit="4"><span class="nav-num">04</span><span class="nav-text">Dynamic Programming</span></a>
+<a href="#unit5" class="nav-item" data-unit="5"><span class="nav-num">05</span><span class="nav-text">More on Dynamic Programming</span></a>
+<a href="#unit6" class="nav-item" data-unit="6"><span class="nav-num">06</span><span class="nav-text">Backtracking</span></a>
+<a href="#unit7" class="nav-item" data-unit="7"><span class="nav-num">07</span><span class="nav-text">Branch and Bound</span></a>
+<a href="#unit8" class="nav-item" data-unit="8"><span class="nav-num">08</span><span class="nav-text">Pattern Matching</span></a>
+<a href="#unit9" class="nav-item" data-unit="9"><span class="nav-num">09</span><span class="nav-text">Huffman Coding &amp; Compression</span></a>
+<a href="#unit10" class="nav-item" data-unit="10"><span class="nav-num">10</span><span class="nav-text">Lower Bound Theory</span></a>
+<a href="#unit11" class="nav-item" data-unit="11"><span class="nav-num">11</span><span class="nav-text">More on Lower Bound Theory</span></a>
+<a href="#unit12" class="nav-item" data-unit="12"><span class="nav-num">12</span><span class="nav-text">Approximation</span></a>
+<a href="#unit13" class="nav-item" data-unit="13"><span class="nav-num">13</span><span class="nav-text">Intractable Problems</span></a>
+<a href="#unit14" class="nav-item" data-unit="14"><span class="nav-num">14</span><span class="nav-text">More on Intractable Problems</span></a>
+      </nav>
+      <div class="sidebar-stats">
+        <div class="stat-item"><span class="stat-num" id="totalQCount">0</span><span class="stat-label">Questions</span></div>
+        <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Papers</span></div>
+        <div class="stat-item"><span class="stat-num">14</span><span class="stat-label">Units</span></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="search-wrap">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search questions…" autocomplete="off" />
+          <button class="search-clear" id="searchClear" title="Clear">✕</button>
+        </div>
+        <div class="filter-chips" id="filterChips">
+          <button class="chip active" data-filter="all">All Papers</button>
+<button class="chip" data-filter="p1">DECAP538</button>
+<button class="chip" data-filter="p2">CAP538</button>
+<button class="chip" data-filter="p3">DECAP538 QB</button>
+<button class="chip" data-filter="p4">GD Infotech ✦</button>
+        </div>
+      </div>
+      <div class="papers-strip">
+        <span class="papers-strip-label">Original papers:</span>
+        <a class="chip paper-link" href="../papers/decap538-80-marks.pdf" target="_blank" rel="noopener">📄 DECAP538 — 80 marks exam paper · PNR DEC508087</a>
+        <a class="chip paper-link" href="../papers/cap538-70-marks.pdf" target="_blank" rel="noopener">📄 CAP538 — 70 marks exam paper · photo of the printed paper (2 pages)</a>
+        <a class="chip paper-link" href="../papers/decap538-question-bank.pdf" target="_blank" rel="noopener">📄 DECAP538 QB — Syllabus-wise question list · 79 questions</a>
+        <a class="chip paper-link" href="../papers/gd-infotech-question-bank.pdf" target="_blank" rel="noopener">📄 GD Infotech ✦ — GD Infotech compilation · original file also contains answers</a>
+      </div>
+      <div id="noResults" class="no-results hidden">
+        <span>🔎</span><br>No questions match your search.
+      </div>
+      <section class="unit-section" id="unit1">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 1</div>
+          <h2 class="unit-title">Introduction: elementary data structures, basic computational models, analysis of algorithms: best case, average case and worst-case behaviour, asymptotic notations: big O notation, recursion, recurrence relations to analyse recursive algorithms</h2>
+          <span class="unit-count" id="count-unit1"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.1 What are elementary data structures?</p>
+              <p>Q.2 Define computational model.</p>
+              <p>Long Q.1 Explain elementary data structures and basic computational models in detail.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.1, DECAP538 QB Q.2, DECAP538 QB Long Q.1</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 3 Q9 Discuss Basic Computational Model with Appropriate Examples.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1 What do you mean by Data Structures?</p>
+              <p>Set 1 Q10 What do you mean by Data Structures? Explain various types of data structures in detail.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: GD Infotech ✦ Q1, GD Infotech ✦ Set 1 Q10</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q21 What are the advantages of using data structure in daily life?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(b) What are the applications of data structures?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(a) Illustrate the steps involved in analyzing algorithm using an example.</p>
+              <p>Q.3 What is algorithm analysis?</p>
+              <p>Q.4 Differentiate between best case and worst case behaviour.</p>
+              <p>Long Q.2 Discuss the analysis of algorithms with best case, average case, and worst-case behaviour.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(a), DECAP538 QB Q.3, DECAP538 QB Q.4, DECAP538 QB Long Q.2</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q7</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q2(b)(ii) Write a note on Asymptotic notations.</p>
+              <p>Q.5 What is Big O notation?</p>
+              <p>Long Q.3 Explain asymptotic notations and Big O notation with examples.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q2(b)(ii), DECAP538 QB Q.5, DECAP538 QB Long Q.3</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q8</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q2(a) What is recurrence relation? How it is useful to analyze an algorithm. Illustrate with an example.</p>
+              <p>Q.6 Define recursion.</p>
+              <p>Q.7 What are recurrence relations?</p>
+              <p>Long Q.4 Discuss recursion and recurrence relations used in recursive algorithms.</p>
+              <p>Set 2 Q9 What is the importance of Recurrence Relations to analyze recursive algorithms?</p>
+              <p>Q11 How to analyse recursive algorithms?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q2(a), DECAP538 QB Q.6, DECAP538 QB Q.7, DECAP538 QB Long Q.4, GD Infotech ✦ Set 2 Q9, GD Infotech ✦ Q11</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q9</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q11 What do you mean by time and space complexity of an algorithm?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit2">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 2</div>
+          <h2 class="unit-title">Divide and Conquer: general method, binary search, merge sort, quick sort, and arithmetic with large integers</h2>
+          <span class="unit-count" id="count-unit2"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.8 Explain divide and conquer method.</p>
+              <p>Long Q.5 Explain divide and conquer strategy with suitable examples.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.8, DECAP538 QB Long Q.5</div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.9 What is binary search?</p>
+              <p>Long Q.6 Describe binary search algorithm with its complexity analysis.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.9, DECAP538 QB Long Q.6</div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.10 Define merge sort.</p>
+              <p>Q.11 What is quick sort?</p>
+              <p>Long Q.7 Explain merge sort and quick sort algorithms in detail.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.10, DECAP538 QB Q.11, DECAP538 QB Long Q.7</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3(b)(ii) Write an algorithm to perform subtraction of two long integers.</p>
+              <p>Q.12 Explain arithmetic with large integers.</p>
+              <p>Long Q.8 Discuss arithmetic operations with large integers.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q3(b)(ii), DECAP538 QB Q.12, DECAP538 QB Long Q.8</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q2(b)(i) Analyze quick sort algorithm using recurrence equation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit3">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 3</div>
+          <h2 class="unit-title">Greedy Method: General Method, Knapsack problem, Minimal Spanning Trees - Prim&#x27;s and Kruskal&#x27;s algorithm, single source shortest paths</h2>
+          <span class="unit-count" id="count-unit3"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(c) Discuss the characteristics of greedy approach.</p>
+              <p>Q1(d) What is greedy approach? What are the problem associated with greedy approach?</p>
+              <p>Q.13 What is greedy method?</p>
+              <p>Long Q.9 Explain greedy method and its applications.</p>
+              <p>Set 3 Q7 Explain the Greedy Method along with the Minimum Spanning Trees and how it is useful in solving the problem.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(c), CAP538 Q1(d), DECAP538 QB Q.13, DECAP538 QB Long Q.9, GD Infotech ✦ Set 3 Q7</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(b) Define feasible solution.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.14 Define knapsack problem.</p>
+              <p>Long Q.10 Solve the knapsack problem using greedy method.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.14, DECAP538 QB Long Q.10</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.15 What is a minimum spanning tree?</p>
+              <p>Q2 Define Minimum Spanning Tree.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.15, GD Infotech ✦ Q2</div>
+          </div>
+          <div class="q-card" data-paper="p1 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q8 Distinguish between Prim&#x27;s and Kruskal&#x27;s algorithm.</p>
+              <p>Q.16 State Prim’s algorithm.</p>
+              <p>Q.17 State Kruskal’s algorithm.</p>
+              <p>Long Q.11 Discuss Prim’s and Kruskal’s algorithms for minimum spanning trees.</p>
+              <p>Set 1 Q6 Explain Prim’s Algorithm to find Minimum Spanning Tree with example. What is its Time Complexity?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q8, DECAP538 QB Q.16, DECAP538 QB Q.17, DECAP538 QB Long Q.11, GD Infotech ✦ Set 1 Q6</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.18 What is single source shortest path problem?</p>
+              <p>Long Q.12 Explain single source shortest path algorithms.</p>
+              <p>Set 2 Q7 Explain any Single Source Shortest Path algorithm with suitable example.</p>
+              <p>Q12 Demonstrate with an example the Single Source Shortest Path using greedy method.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.18, DECAP538 QB Long Q.12, GD Infotech ✦ Set 2 Q7, GD Infotech ✦ Q12</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q7</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q22 What is the meaning of spanning of a tree?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q8</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3(a) What are the characteristics of minimum spanning tree? Generate the minimum spanning tree for following graph using Kruskal&#x27;s algorithm.</p>
+              <a href="../papers/cap538-70-marks.pdf" target="_blank" rel="noopener" title="Open the original paper"><img class="q-img" src="../assets/graph-q3a-kruskal.png" alt="Graph for Q3(a) — Kruskal&#x27;s algorithm (clipped from the original CAP538 paper)"></a>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q9</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3(b)(i) What is minimum spanning tree? Generate the minimum spanning tree for following graph using Prims algorithm.</p>
+              <a href="../papers/cap538-70-marks.pdf" target="_blank" rel="noopener" title="Open the original paper"><img class="q-img" src="../assets/graph-q3b-prim.png" alt="Graph for Q3(b)(i) — Prim&#x27;s algorithm (clipped from the original CAP538 paper)"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit4">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 4</div>
+          <h2 class="unit-title">Dynamic Programming: general method, chained matrix multiplication, optimal storage on tapes</h2>
+          <span class="unit-count" id="count-unit4"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q6 Explain the concept of dynamic programming. How does it differ from other problem-solving techniques?</p>
+              <p>Q.19 Define dynamic programming.</p>
+              <p>Long Q.13 Discuss dynamic programming and its general method.</p>
+              <p>Set 3 Q5 What is Dynamic Programming? Explain the difference between Dynamic Programming and Greedy Approach.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q6, DECAP538 QB Q.19, DECAP538 QB Long Q.13, GD Infotech ✦ Set 3 Q5</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(c) State the principle of optimality.</p>
+              <p>Q7 What are the key characteristics of a problem that can be solved using dynamic programming?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q1(c), DECAP538 Q7</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3 What is the difference between top-down and bottom-up Dynamic Programming approaches?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4 Give an example of a Dynamic Programming problem.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.20 What is chained matrix multiplication?</p>
+              <p>Long Q.14 Explain chained matrix multiplication using dynamic programming.</p>
+              <p>Set 1 Q8 How can you use chained matrix multiplication to optimize the efficiency of other algorithms, such as Strassen&#x27;s algorithm for matrix multiplication?</p>
+              <p>Set 2 Q5 Apply the concept of Dynamic Programming to display with an example Chained Matrix Multiplication.</p>
+              <p>Q13 Show that matrix chain multiplication order changes required multiplications.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.20, DECAP538 QB Long Q.14, GD Infotech ✦ Set 1 Q8, GD Infotech ✦ Set 2 Q5, GD Infotech ✦ Q13</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.21 Explain optimal storage on tapes.</p>
+              <p>Long Q.15 Discuss optimal storage on tapes problem.</p>
+              <p>Q23 What is the main advantage of using optimal storage tape?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.21, DECAP538 QB Long Q.15, GD Infotech ✦ Q23</div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit5">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 5</div>
+          <h2 class="unit-title">More on Dynamic Programming: all-pairs shortest paths, optimal binary search trees</h2>
+          <span class="unit-count" id="count-unit5"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.22 What is all-pairs shortest path problem?</p>
+              <p>Long Q.16 Explain all-pairs shortest paths problem.</p>
+              <p>Q14 Discuss All-Pairs shortest paths with example.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.22, DECAP538 QB Long Q.16, GD Infotech ✦ Q14</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.23 Define optimal binary search tree.</p>
+              <p>Long Q.17 Discuss the construction of optimal binary search trees.</p>
+              <p>Q24 Discuss the concept of Optimal Binary Search.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.23, DECAP538 QB Long Q.17, GD Infotech ✦ Q24</div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit6">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 6</div>
+          <h2 class="unit-title">Backtracking: general method, the 8-queens problem, graph coloring, Hamiltonian cycles</h2>
+          <span class="unit-count" id="count-unit6"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(d) What is backtracking?</p>
+              <p>Q.24 What is backtracking?</p>
+              <p>Long Q.18 Explain backtracking technique with suitable examples.</p>
+              <p>Set 1 Q2 Explain the general structure of a backtracking algorithm. What are the essential components, and how do they work together?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q1(d), DECAP538 QB Q.24, DECAP538 QB Long Q.18, GD Infotech ✦ Set 1 Q2</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.25 Explain the 8-queens problem.</p>
+              <p>Long Q.19 Discuss the 8-queens problem using backtracking.</p>
+              <p>Q16 Diagrammatically discuss the rules of the 8-Queen problem.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.25, DECAP538 QB Long Q.19, GD Infotech ✦ Q16</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(e) Define the graph coloring problem?</p>
+              <p>Q.26 What is graph coloring?</p>
+              <p>Long Q.20 Explain graph coloring and Hamiltonian cycles.</p>
+              <p>Set 3 Q6 Discuss Graph Coloring by taking an appropriate example. Also explain the applications of Graph Coloring.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(e), DECAP538 QB Q.26, DECAP538 QB Long Q.20, GD Infotech ✦ Set 3 Q6</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.27 Define Hamiltonian cycle.</p>
+              <p>Set 2 Q8 Discuss the Hamiltonian Cycles with the Backtracking approach.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.27, GD Infotech ✦ Set 2 Q8</div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit7">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 7</div>
+          <h2 class="unit-title">Branch and Bound: general method, 0/1 knapsack problem, travelling salesperson problem</h2>
+          <span class="unit-count" id="count-unit7"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.28 What is branch and bound method?</p>
+              <p>Long Q.21 Discuss branch and bound method in detail.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.28, DECAP538 QB Long Q.21</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(f) State the 0/1 Knapsack problem.</p>
+              <p>Q.29 Explain 0/1 knapsack problem.</p>
+              <p>Long Q.22 Solve the 0/1 knapsack problem using branch and bound.</p>
+              <p>Q25 What is 0/1 knapsack? Explain its use.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(f), DECAP538 QB Q.29, DECAP538 QB Long Q.22, GD Infotech ✦ Q25</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4(a) Consider the following 0/1 Knapsack problem instance: N=4, (P1, P2, P3, P4) = (10, 10, 12, 18), (w1, w2, w3, w4) = (2, 4, 6, 9) and m = 15. Trace the working of least cost branch and bound.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.30 What is travelling salesperson problem?</p>
+              <p>Long Q.23 Explain travelling salesperson problem.</p>
+              <p>Set 1 Q4 Describe a Branch and Bound algorithm for solving the Travelling Salesman Problem (TSP).</p>
+              <p>Set 2 Q4 Explain the method of reduction to solve the Travelling Salesman Problem (TSP) using Branch and Bound.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.30, DECAP538 QB Long Q.23, GD Infotech ✦ Set 1 Q4, GD Infotech ✦ Set 2 Q4</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(e) Define Lower bound in branch and bound?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q9 Explain control abstraction of LC-branch and bound?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit8">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 8</div>
+          <h2 class="unit-title">Pattern Matching: design of algorithms for pattern matching problems: brute force, knuth-morris-pratt, boyer moore algorithms</h2>
+          <span class="unit-count" id="count-unit8"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.31 Define pattern matching.</p>
+              <p>Q5 What is pattern matching in the context of data structures?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.31, GD Infotech ✦ Q5</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.32 What is brute force pattern matching?</p>
+              <p>Q15 Explain Brute Force with an example.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.32, GD Infotech ✦ Q15</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4(b)(i) Apply Knuth-Morris-Pratt technique on the following text and pattern: Text: ababcdabbabababad, Pattern: abababa.</p>
+              <p>Q.33 Explain KMP algorithm.</p>
+              <p>Set 3 Q4 Explain KMP Algorithm by taking a suitable example.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q4(b)(i), DECAP538 QB Q.33, GD Infotech ✦ Set 3 Q4</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q5(b)(i) Match the following pattern with text using Boyer-Moore algorithm: Text: ABCABCDABABCABAABDABCDABDE, Pattern: ABCDAB.</p>
+              <p>Q.34 What is Boyer Moore algorithm?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q5(b)(i), DECAP538 QB Q.34</div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.24 Discuss brute force, KMP, and Boyer Moore pattern matching algorithms.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit9">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 9</div>
+          <h2 class="unit-title">Huffman Coding and Data Compression: Huffman coding and data compression problems</h2>
+          <span class="unit-count" id="count-unit9"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(g) What are the applications of Huffman coding?</p>
+              <p>Q.35 Define Huffman coding.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(g), DECAP538 QB Q.35</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.36 What is data compression?</p>
+              <p>Long Q.25 Explain Huffman coding and data compression techniques.</p>
+              <p>Set 3 Q10 Explain Data Compression and its Techniques in Detail.</p>
+              <p>Q6 What do you understand by Data Compression?</p>
+              <p>Q26 Define need and applications of data compression.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.36, DECAP538 QB Long Q.25, GD Infotech ✦ Set 3 Q10, GD Infotech ✦ Q6, GD Infotech ✦ Q26</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3 Discuss the advantages and disadvantages of lossless and lossy data compression techniques. Provide real-world examples where each type of compression is more suitable.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(f) Name two commonly used lossless compression algorithms other than Huffman coding.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 1 Q7 Consider the following message: abracadabra. Construct a Huffman code for this message, and calculate the average codeword length.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4(b)(ii) Generate the Huffman code for the text - &quot;Grapes are sour&quot;.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q7</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 2 Q10 What is Variable Size Encoding? Explain with example. How is it better as compared to ASCII and fixed size encoding? Explain the differences in cost as well.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit10">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 10</div>
+          <h2 class="unit-title">Lower Bound Theory: comparison tree, oracles and adversary arguments</h2>
+          <span class="unit-count" id="count-unit10"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(i) What is the purpose of lower bound theory?</p>
+              <p>Q.37 Explain lower bound theory.</p>
+              <p>Set 1 Q5 Explain the concept of lower bounds in the context of algorithm analysis. Provide an example where lower bounds are used to establish the limits of efficiency in solving a problem.</p>
+              <p>Set 3 Q11 What is Lower Bound Theory? Briefly explain the techniques used for Lower Bound Theory concept.</p>
+              <p>Q7 Define Lower Bound in the context of algorithm analysis.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(i), DECAP538 QB Q.37, GD Infotech ✦ Set 1 Q5, GD Infotech ✦ Set 3 Q11, GD Infotech ✦ Q7</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.38 What is a comparison tree?</p>
+              <p>Long Q.26 Discuss lower bound theory and comparison tree method.</p>
+              <p>Q17 Describe comparison tree with example.</p>
+              <p>Q27 What is the use of Comparison Trees?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.38, DECAP538 QB Long Q.26, GD Infotech ✦ Q17, GD Infotech ✦ Q27</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q5(b)(ii) Draw a comparison tree for sorting any four numbers. Sort three elements A[1]=19, A[2]=16, A[3]=18 and A[4]=45 using comparison tree.</p>
+              <p class="note">[Original paper says &quot;three elements&quot; but lists four values (A[1] to A[4]) — wording preserved as printed.]</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.39 Define oracle and adversary arguments.</p>
+              <p>Long Q.27 Explain oracle and adversary arguments with examples.</p>
+              <p>Set 2 Q6 Explain the Oracles and Adversary arguments with an example.</p>
+              <p>Q8 What is the adversary argument?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.39, DECAP538 QB Long Q.27, GD Infotech ✦ Set 2 Q6, GD Infotech ✦ Q8</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 2 Q3 Differentiate between various techniques available for approximating the lower bound of an algorithm.</p>
+              <p>Set 3 Q8 Illustrate various techniques available in Lower Bound Theory with examples.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: GD Infotech ✦ Set 2 Q3, GD Infotech ✦ Set 3 Q8</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(a) Define sorting.</p>
+              <p>Q1(g) What is the lower bound on the worst-case running time of any sorting algorithm?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q1(a), DECAP538 Q1(g)</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q7</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(h) What is the relationship between lower bounds and algorithm optimality?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q8</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q2 Discuss the significance of decision tree models in lower bound theory. How are decision trees used to establish lower bounds for sorting algorithms?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q9</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4 Describe the lower bound for inserting or deleting elements in a dynamically changing data structure, such as a binary search tree.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q10</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 1 Q11 Discuss the lower bound for searching in a sorted array. How does it relate to binary search, and what is the significance of O(log N) time complexity?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit11">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 11</div>
+          <h2 class="unit-title">More on Lower Bound Theory: lower bounds through reductions</h2>
+          <span class="unit-count" id="count-unit11"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.40 What are reductions in lower bound theory?</p>
+              <p>Long Q.28 Discuss lower bounds through reductions.</p>
+              <p>Q18 What do you mean by reduction?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.40, DECAP538 QB Long Q.28, GD Infotech ✦ Q18</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 1 Q3 Demonstrate the process of reducing one problem to another using a specific example. Show how reduction can be used to prove the NP-completeness of a problem.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit12">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 12</div>
+          <h2 class="unit-title">Approximation: approximation basics, task scheduling, bin packing</h2>
+          <span class="unit-count" id="count-unit12"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(h) What do you mean by approximation algorithm?</p>
+              <p>Q.41 Define approximation algorithms.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q1(h), DECAP538 QB Q.41</div>
+          </div>
+          <div class="q-card" data-paper="p1 p3">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(i) What is the difference between preemptive and non-preemptive scheduling?</p>
+              <p>Q.42 What is task scheduling?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q1(i), DECAP538 QB Q.42</div>
+          </div>
+          <div class="q-card" data-paper="p2 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q5(a) Discuss the problem of Bin Packing with suitable example.</p>
+              <p>Q.43 Explain bin packing problem.</p>
+              <p>Set 2 Q11 Explain Bin Packing Problem with Suitable Code.</p>
+              <p>Q9 What is the bin packing problem?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: CAP538 Q5(a), DECAP538 QB Q.43, GD Infotech ✦ Set 2 Q11, GD Infotech ✦ Q9</div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.29 Explain approximation algorithms with task scheduling and bin packing problems.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q5 Describe the First-Fit, Best-Fit, and Next-Fit heuristics for bin packing.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q29 What bin packing based applications exist in real life?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit13">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 13</div>
+          <h2 class="unit-title">Intractable Problems: basic concepts, non-deterministic algorithms, NP completeness</h2>
+          <span class="unit-count" id="count-unit13"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.44 What are intractable problems?</p>
+              <p>Long Q.30 Discuss intractable problems, NP-hard and NP-complete problems in detail.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.44, DECAP538 QB Long Q.30</div>
+          </div>
+          <div class="q-card" data-paper="p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.45 Define NP-complete problems.</p>
+              <p>Q28 What do you mean by NP-complete problems?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 QB Q.45, GD Infotech ✦ Q28</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 3 Q3 What is the difference between deterministic and non-deterministic algorithms?</p>
+              <p>Q19 Differentiate deterministic and non-deterministic algorithms.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: GD Infotech ✦ Set 3 Q3, GD Infotech ✦ Q19</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 1 Q9 Discuss the use of non-determinism in algorithms like non-deterministic Turing machines or non-deterministic finite automata.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q30 What do you mean by P problems?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(j) What is decision problem? Give an example.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q7</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q6(b)(ii) What is the relationship among P, NP, NP-complete and NP-hard problems? Explain with a neat and clean diagram.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit14">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 14</div>
+          <h2 class="unit-title">More on Intractable Problems: examples of NP-hard and NP-complete problems, cook&#x27;s theorem, problem reduction</h2>
+          <span class="unit-count" id="count-unit14"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p3 p4">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p3">DECAP538 QB</span><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q10 Define NP-hard problems and provide an example of a problem that is NP-hard. Explain why it is considered NP-hard.</p>
+              <p>Q.46 What are NP-hard problems?</p>
+              <p>Q10 Give an example of an NP-hard problem and explain why it is classified as such.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q10, DECAP538 QB Q.46, GD Infotech ✦ Q10</div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 2 Q2 Discuss the concept of NP-Hard and NP-Complete by taking an example algorithm.</p>
+              <p>Q20 Generalize NP-Hard and NP-Complete problems.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: GD Infotech ✦ Set 2 Q2, GD Infotech ✦ Q20</div>
+          </div>
+          <div class="q-card" data-paper="p1 p2 p3">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP538</span><span class="tag tag-p2">CAP538</span><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(j) Explain the significance of Stephen Cook&#x27;s theorem.</p>
+              <p>Q6(b)(i) Explain Cook&#x27;s theorem in full detail.</p>
+              <p>Q.47 Explain Cook’s theorem.</p>
+              <p>Long Q.31 Explain Cook’s theorem and problem reduction techniques.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP538 Q1(j), CAP538 Q6(b)(i), DECAP538 QB Q.47, DECAP538 QB Long Q.31</div>
+          </div>
+          <div class="q-card" data-paper="p3">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p3">DECAP538 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.48 What is problem reduction?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p4">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p4">GD Infotech ✦</span></div>
+            </div>
+            <div class="q-body">
+              <p>Set 3 Q2 Explain how the Clique Decision Problem is an NP-Hard problem.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q6</span>
+              <div class="q-tags"><span class="tag tag-p2">CAP538</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q6(a) Proof that satisfiability is in P if and only if P = NP.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+  <footer class="site-footer"><div class="footer-inner">
+    <p>DECAP538 — Algorithm Design and Analysis | Question Bank</p>
+    <p class="footer-note">Questions sourced from 4 papers incl. GD Infotech. Exact wordings preserved as in the original papers; the two graph diagrams are clipped from the original CAP538 paper.</p>
+  </div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
