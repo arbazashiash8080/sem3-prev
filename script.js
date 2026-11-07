@@ -63,13 +63,17 @@
       }
     });
 
-    /* show/hide unit sections based on visible cards */
+    /* show/hide unit sections based on visible cards + live-update the count pill */
     allSections.forEach(section => {
       const visibleCards = section.querySelectorAll('.q-card:not(.hidden)');
       if (visibleCards.length === 0) {
         section.classList.add('hidden');
       } else {
         section.classList.remove('hidden');
+      }
+      const countEl = document.getElementById('count-' + section.id);
+      if (countEl) {
+        countEl.textContent = visibleCards.length + ' Q' + (visibleCards.length !== 1 ? 's' : '');
       }
     });
 
@@ -212,24 +216,49 @@
   ───────────────────────────────────────── */
   applyFilters();
 
-})();
+  /* ─────────────────────────────────────────
+     MOBILE DRAWER NAVIGATION
+     Fixed top bar (always on screen) opens the units
+     as a slide-in drawer; closes on unit tap, backdrop
+     tap, the drawer's close button, or Esc.
+  ───────────────────────────────────────── */
+  const sidebarEl   = document.getElementById('sidebar');
+  const menuBtn     = document.getElementById('mobileMenuBtn');
+  const searchBtn   = document.getElementById('mobileSearchBtn');
+  const drawerClose = document.getElementById('navToggle');
+  const backdrop    = document.getElementById('navBackdrop');
 
-  // Hamburger: collapse/expand the units sidebar on mobile
-  const navToggle = document.getElementById('navToggle');
-  const sidebarEl = document.getElementById('sidebar');
-  if (navToggle && sidebarEl) {
-    navToggle.addEventListener('click', () => {
-      const open = sidebarEl.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.textContent = open ? '\u2715' : '\u2630';
+  function openDrawer() {
+    if (!sidebarEl) return;
+    sidebarEl.classList.add('open');
+    if (backdrop) backdrop.classList.add('show');
+    document.body.classList.add('drawer-open');
+    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+  }
+  function closeDrawer() {
+    if (!sidebarEl) return;
+    sidebarEl.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('show');
+    document.body.classList.remove('drawer-open');
+    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.nav-item').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 900) closeDrawer();
     });
-    document.querySelectorAll('.nav-item').forEach(a => {
-      a.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
-          sidebarEl.classList.remove('open');
-          navToggle.textContent = '\u2630';
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDrawer();
+  });
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      closeDrawer();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => searchInput.focus({ preventScroll: true }), 400);
     });
   }
+
+})();

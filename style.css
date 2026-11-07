@@ -829,3 +829,164 @@ a.chip.paper-link {
   .unit-count { margin-left: 0; }
   a.chip.paper-link { font-size: 0.72rem; padding: 0.3rem 0.6rem; }
 }
+
+/* ============================
+   STICKY MOBILE NAV BAR (2026-11-06 v2)
+   On phones the Units bar sticks to the top while scrolling, so the
+   hamburger (and a search shortcut) are reachable from ANY scroll depth.
+   The unit list opens as a dropdown panel under the bar; picking a unit,
+   tapping outside, or Esc closes it. Anchor jumps get scroll-margin so
+   unit titles are not hidden under the bar. Desktop keeps the full
+   sticky sidebar (the body wrapper uses display:contents there).
+   ============================ */
+.sidebar-body { display: contents; }
+.unit-section { scroll-margin-top: 14px; }
+.nav-search {
+  display: none;
+  margin-left: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav-search:hover { border-color: var(--accent); }
+.nav-toggle { margin-left: 0.45rem; }
+@media (max-width: 900px) {
+  .nav-search { display: inline-flex; }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 70;
+    height: auto;
+    overflow: visible;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  }
+  .sidebar-body { display: none; }
+  .sidebar.open .sidebar-body {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 22px 34px rgba(0, 0, 0, 0.5);
+    max-height: min(64vh, 500px);
+    overflow-y: auto;
+  }
+  .unit-section { scroll-margin-top: 76px; }
+}
+
+/* ============================
+   MOBILE DRAWER NAV (2026-11-06 v3)
+   Real mobile pattern: a FIXED top bar (hamburger + subject + search)
+   that is on screen from the first moment and at every scroll depth,
+   opening the units as a slide-in DRAWER with a proper row list and a
+   dimmed backdrop. Replaces the v1/v2 in-flow sticky bar on <=900px.
+   Desktop is untouched (bar + backdrop are never rendered there).
+   ============================ */
+.mobile-bar { display: none; }
+.nav-backdrop { display: none; }
+@media (max-width: 900px) {
+  .mobile-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 52px;
+    padding: 0 0.6rem;
+    z-index: 100;
+    background: rgba(19, 22, 30, 0.94);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobile-bar-btn {
+    width: 40px; height: 40px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .mobile-bar-title {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .site-header { margin-top: 52px; }
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: auto;
+    width: min(320px, 85vw);
+    height: 100vh;
+    height: 100dvh;
+    z-index: 120;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    box-shadow: none;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 24px 0 48px rgba(0, 0, 0, 0.5);
+  }
+  .sidebar-body, .sidebar.open .sidebar-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    position: static;
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    background: transparent;
+  }
+  .sidebar .unit-nav, .sidebar.open .unit-nav {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+  }
+  .sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.85rem;
+    border-left: 2px solid transparent;
+    border-bottom: none;
+    border-radius: 0;
+  }
+  .sidebar .nav-num { display: block; }
+  .sidebar-header .nav-toggle { margin-left: auto; }
+  .nav-search { display: none !important; }
+  .nav-backdrop.show {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 6, 10, 0.55);
+    z-index: 110;
+  }
+  body.drawer-open { overflow: hidden; }
+  .unit-section { scroll-margin-top: 66px; }
+  .back-to-top { z-index: 90; }
+}
