@@ -28,9 +28,16 @@
       </div>
     </div>
   </header>
+  <div class="mobile-bar">
+    <button class="mobile-bar-btn" id="mobileMenuBtn" aria-label="Open units menu" aria-expanded="false">☰</button>
+    <span class="mobile-bar-title">DECAP538 · Algorithm Design and Analysis</span>
+    <button class="mobile-bar-btn" id="mobileSearchBtn" aria-label="Search questions">🔍</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
   <div class="page-layout">
     <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header"><span class="sidebar-icon">📚</span><span>Units</span><button class="nav-toggle" id="navToggle" aria-label="Open units menu" aria-expanded="false">☰</button></div>
+      <div class="sidebar-header"><span class="sidebar-icon">📚</span><span>Units</span><button class="nav-toggle" id="navToggle" aria-label="Close units menu">✕</button></div>
+      <div class="sidebar-body" id="sidebarBody">
       <nav class="unit-nav" id="unitNav">
         <a href="#unit1" class="nav-item active" data-unit="1"><span class="nav-num">01</span><span class="nav-text">Introduction</span></a>
 <a href="#unit2" class="nav-item" data-unit="2"><span class="nav-num">02</span><span class="nav-text">Divide and Conquer</span></a>
@@ -51,6 +58,7 @@
         <div class="stat-item"><span class="stat-num" id="totalQCount">0</span><span class="stat-label">Questions</span></div>
         <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Papers</span></div>
         <div class="stat-item"><span class="stat-num">14</span><span class="stat-label">Units</span></div>
+      </div>
       </div>
     </aside>
     <main class="main-content">

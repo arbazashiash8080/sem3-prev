@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECAP790 – Probability and Statistics | Question Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .site-header::after { content: 'DECAP790'; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="back-link"><span class="back-arrow">←</span> Back to Portal</a>
+      <div class="header-badge">DECAP790</div>
+      <h1 class="site-title">Probability<br>and Statistics</h1>
+      <p class="site-subtitle">Question Bank — Organized by 16 Units · 2 Papers</p>
+      <div class="paper-legend">
+        <span class="legend-label">Papers:</span>
+        <span class="tag tag-p1">DECAP790</span>
+        <span class="tag tag-p2">DECAP790 QB</span>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-bar">
+    <button class="mobile-bar-btn" id="mobileMenuBtn" aria-label="Open units menu" aria-expanded="false">☰</button>
+    <span class="mobile-bar-title">DECAP790 · Probability and Statistics</span>
+    <button class="mobile-bar-btn" id="mobileSearchBtn" aria-label="Search questions">🔍</button>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <div class="page-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header"><span class="sidebar-icon">📚</span><span>Units</span><button class="nav-toggle" id="navToggle" aria-label="Close units menu">✕</button></div>
+      <div class="sidebar-body" id="sidebarBody">
+      <nav class="unit-nav" id="unitNav">
+        <a href="#unit1" class="nav-item active" data-unit="1"><span class="nav-num">01</span><span class="nav-text">Introduction to Statistics</span></a>
+<a href="#unit2" class="nav-item" data-unit="2"><span class="nav-num">02</span><span class="nav-text">Central Tendency</span></a>
+<a href="#unit3" class="nav-item" data-unit="3"><span class="nav-num">03</span><span class="nav-text">Dispersion</span></a>
+<a href="#unit4" class="nav-item" data-unit="4"><span class="nav-num">04</span><span class="nav-text">Moments, Skewness &amp; Kurtosis</span></a>
+<a href="#unit5" class="nav-item" data-unit="5"><span class="nav-num">05</span><span class="nav-text">Probability</span></a>
+<a href="#unit6" class="nav-item" data-unit="6"><span class="nav-num">06</span><span class="nav-text">Random Variables &amp; Expectation</span></a>
+<a href="#unit7" class="nav-item" data-unit="7"><span class="nav-num">07</span><span class="nav-text">Probability Distributions</span></a>
+<a href="#unit8" class="nav-item" data-unit="8"><span class="nav-num">08</span><span class="nav-text">Correlation &amp; Regression</span></a>
+<a href="#unit9" class="nav-item" data-unit="9"><span class="nav-num">09</span><span class="nav-text">Sampling &amp; Sampling Design</span></a>
+<a href="#unit10" class="nav-item" data-unit="10"><span class="nav-num">10</span><span class="nav-text">Hypothesis Testing</span></a>
+<a href="#unit11" class="nav-item" data-unit="11"><span class="nav-num">11</span><span class="nav-text">ANOVA</span></a>
+<a href="#unit12" class="nav-item" data-unit="12"><span class="nav-num">12</span><span class="nav-text">Index Numbers</span></a>
+<a href="#unit13" class="nav-item" data-unit="13"><span class="nav-num">13</span><span class="nav-text">Time Series</span></a>
+<a href="#unit14" class="nav-item" data-unit="14"><span class="nav-num">14</span><span class="nav-text">Statistical Quality Control</span></a>
+<a href="#unit15" class="nav-item" data-unit="15"><span class="nav-num">15</span><span class="nav-text">Bayesian Statistics</span></a>
+<a href="#unit16" class="nav-item" data-unit="16"><span class="nav-num">16</span><span class="nav-text">Statistical Software</span></a>
+      </nav>
+      <div class="sidebar-stats">
+        <div class="stat-item"><span class="stat-num" id="totalQCount">0</span><span class="stat-label">Questions</span></div>
+        <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Papers</span></div>
+        <div class="stat-item"><span class="stat-num">16</span><span class="stat-label">Units</span></div>
+      </div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="search-wrap">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search questions…" autocomplete="off" />
+          <button class="search-clear" id="searchClear" title="Clear">✕</button>
+        </div>
+        <div class="filter-chips" id="filterChips">
+          <button class="chip active" data-filter="all">All Papers</button>
+<button class="chip" data-filter="p1">DECAP790</button>
+<button class="chip" data-filter="p2">DECAP790 QB</button>
+        </div>
+      </div>
+      <div class="papers-strip">
+        <span class="papers-strip-label">Original papers:</span>
+        <a class="chip paper-link" href="../papers/decap790-80-marks.pdf" target="_blank" rel="noopener">📄 DECAP790 — 80 marks exam paper · PNR DEC507659</a>
+        <a class="chip paper-link" href="../papers/decap790-question-bank.pdf" target="_blank" rel="noopener">📄 DECAP790 QB — Syllabus-wise question list · 30 short + 30 long</a>
+      </div>
+      <div id="noResults" class="no-results hidden">
+        <span>🔎</span><br>No questions match your search.
+      </div>
+      <section class="unit-section" id="unit1">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 1</div>
+          <h2 class="unit-title">Introduction to Statistics: meaning and scope of statistics, population and sample, statistical inference and its types</h2>
+          <span class="unit-count" id="count-unit1"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.1 Differentiate between samples and populations in the context of statistics.</p>
+              <p>Q.30 Define population in statistics.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Q.1, DECAP790 QB Q.30</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.11 What is Statistical Inference, and what are its types?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.12 Explain statistical interference with the help of example.</p>
+              <p class="note">Printed as “interference” in the source paper — read as “inference”.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit2">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 2</div>
+          <h2 class="unit-title">Measures of Central Tendency: measures of location: mean, median, mode; choice of measure when outliers are present; mean, median and mode in a perfect normal distribution</h2>
+          <span class="unit-count" id="count-unit2"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(d) Which measure of central tendency is better if many outliers are present in data?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q4 What are different measures of location explain with example of each</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q10 What is mean, median and mode? Why mean median and mode of perfect normal distribution is Equal?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.1 Execute Various measure of descriptive statistics used by researchers along with suitable example of each?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit3">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 3</div>
+          <h2 class="unit-title">Measures of Dispersion: dispersion and variability, absolute and relative measures of dispersion</h2>
+          <span class="unit-count" id="count-unit3"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q3 How Dispersion is measured? Explain it with example</p>
+              <p>Long Q.2 Execute various measures of variability and dispersion used by researchers along with example?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q3, DECAP790 QB Long Q.2</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.13 Explain the absolute measure of dispersion with the help of example.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit4">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 4</div>
+          <h2 class="unit-title">Moments, Skewness and Kurtosis: raw and central moments, effect of change of origin and scale on moments, skewness, kurtosis, moment generating function</h2>
+          <span class="unit-count" id="count-unit4"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(e) What are raw moments in statistics?</p>
+              <p>Long Q.3 Explain the concept of raw moments &amp; central moments, along with suitable example?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q1(e), DECAP790 QB Long Q.3</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.3 What are moments of random variables, and how are they calculated?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.4 Explain the concept of Effect of change of origin and scale on moments with suitable example?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(c) What is skewness? Why it is important</p>
+              <p>Q8 Why skewness is a measure of the asymmetry of the probability distribution of a random variable about its mean?</p>
+              <p>Long Q.7 Define skewness and Kurtosis for continuous probability distribution.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q1(c), DECAP790 Q8, DECAP790 QB Long Q.7</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.16 Briefly explain the properties of moment generating function.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit5">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 5</div>
+          <h2 class="unit-title">Probability: basic probability, permutation and combination, conditional probability</h2>
+          <span class="unit-count" id="count-unit5"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(a) When a die is rolled, what is the likelihood of receiving a 2 or a 5?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.21 What is permutation?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.22 Define combination.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.13 Explain the concept of conditional probability along with suitable example?</p>
+              <p>Long Q.14 Explain the concept of conditional probability along with suitable example?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Long Q.13, DECAP790 QB Long Q.14</div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit6">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 6</div>
+          <h2 class="unit-title">Random Variables and Expectation: probability distribution, mathematical expectation and its properties, variance and covariance, moments of two or more random variables</h2>
+          <span class="unit-count" id="count-unit6"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.2 Define mathematical expectations and their significance in probability.</p>
+              <p>Long Q.22 Discuss the properties of expectations and their role in probability theory.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Q.2, DECAP790 QB Long Q.22</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.23 What is probability distribution?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.8 Define Variance, Properties of variance and covariance?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.19 Explain moments of two or more random variables and their practical significance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit7">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 7</div>
+          <h2 class="unit-title">Probability Distributions: binomial, Poisson, negative binomial, normal and Student&#x27;s t distributions and their properties</h2>
+          <span class="unit-count" id="count-unit7"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.24 Define binomial distribution.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.5 Explain the Poisson distribution and its characteristics.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.10 Define what is difference between Binomial, Poisson and Negative Binomial Distribution</p>
+              <p>Long Q.26 Discuss the characteristics and properties of the binomial, Poisson, negative binomial, and normal distributions,</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Long Q.10, DECAP790 QB Long Q.26</div>
+          </div>
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q11 Explain the concept of normal distribution. Discuss some examples of normal distribution.</p>
+              <p>Q.25 What is normal distribution?</p>
+              <p>Long Q.9 Define what is normal distribution and example?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q11, DECAP790 QB Q.25, DECAP790 QB Long Q.9</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.24 Explain the Student&#x27;s t-distribution, its properties, and critical values.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit8">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 8</div>
+          <h2 class="unit-title">Correlation and Regression: correlation and its significance, Pearson&#x27;s correlation coefficient, regression analysis and the research questions it answers</h2>
+          <span class="unit-count" id="count-unit8"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.14 Define correlation and explain its significance in statistical analysis.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.15 Explain the concept of regression.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q9 What are different methods to measure correlation and regression?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(f) What types of Research issues can regression analysis answer?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.29 Explain Pearson&#x27;s correlation coefficient and discuss its properties. How is it calculated, and what does it indicate about the strength and direction of the relationship between variables?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit9">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 9</div>
+          <h2 class="unit-title">Sampling and Sampling Design: sampling, random sampling with and without replacement, random samples and random numbers, sampling design</h2>
+          <span class="unit-count" id="count-unit9"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(b) What is random sampling? Explain with example.</p>
+              <p>Q.29 What is sampling?</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q1(b), DECAP790 QB Q.29</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q2 What is sampling design and explain with example?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.18 Differentiate between sampling with and without replacement.</p>
+              <p>Long Q.17 Explain the difference between random sampling with replacement and random sampling without replacement. Provide real-life scenarios where each method would be appropriate</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Q.18, DECAP790 QB Long Q.17</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.23 Explain the concepts of random samples and random numbers in sampling theory.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit10">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 10</div>
+          <h2 class="unit-title">Hypothesis Testing: hypothesis, null and alternative hypotheses, steps involved in hypothesis testing, t-test, hypothesis testing in business</h2>
+          <span class="unit-count" id="count-unit10"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.26 Define hypothesis testing.</p>
+              <p>Long Q.18 Define a hypothesis and its role in scientific research. Describe the steps involved in hypothesis testing, from setting up hypotheses to making a decision.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Q.26, DECAP790 QB Long Q.18</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.27 What is null hypothesis?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1 p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(i) Write example for alternate hypothesis?</p>
+              <p>Q.28 Define alternative hypothesis.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 Q1(i), DECAP790 QB Q.28</div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.8 How is hypothesis testing used in business contexts?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q5 What is T-test used for, explain it with an example.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit11">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 11</div>
+          <h2 class="unit-title">Analysis of Variance: objectives of ANOVA, one-way and two-way classification, F-statistic and F-distribution, p-value in ANOVA, homogeneity of variances</h2>
+          <span class="unit-count" id="count-unit11"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.4 Describe two-way classification in analysis of variance.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.9 What is the F-statistic, and how is it critical in the F-distribution?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.19 Describe the importance of checking for homogeneity of variances in ANOVA. What test is commonly used for this purpose?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(j) What is p value in ANOVA?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q5</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.20 Explain the objectives of analyzing variance in different scenarios.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit12">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 12</div>
+          <h2 class="unit-title">Index Numbers: index numbers and their importance in measuring economic change, Laspeyres, Paasche and Fisher indices, process of constructing index numbers</h2>
+          <span class="unit-count" id="count-unit12"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.5 Discuss the importance of index numbers in measuring changes in economic variables over time.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.6 Compare and contrast the different methods of constructing index numbers, such as the Laspeyres, Paasche, and Fisher indices. Highlight their advantages and disadvantages.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.15 Discuss use of Index numbers and process to create index numbers?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit13">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 13</div>
+          <h2 class="unit-title">Time Series Analysis: time series and its components: trend, seasonality and irregular variations; types of time series analysis; uses in understanding trends over time</h2>
+          <span class="unit-count" id="count-unit13"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.7 Define time series in statistics.</p>
+              <p>Long Q.11 Define a time series and its importance in data analysis. Give examples of economic and financial time series.</p>
+            </div>
+            <div class="q-repeat-note">⚠ Same / similar question also in: DECAP790 QB Q.7, DECAP790 QB Long Q.11</div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(h) How time series analysis helps organizations understand the underlying causes of trends or systemic patterns over time?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.12 Break down the components of a time series, including trend, seasonality, and irregular variations. Explain how these components can be identified and analyzed.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.16 Illustrate use of time series data and what are the different type of time series analysis?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit14">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 14</div>
+          <h2 class="unit-title">Statistical Quality Control: statistical quality control and process control, control charts: X-bar and R charts, p chart, np chart, c chart</h2>
+          <span class="unit-count" id="count-unit14"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.6 What is statistical quality control and its role in process control?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q1(g) Why are X bar and R charts used together?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q6 In what scenario p and Np chart is used?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.17 Give an example of when you would use a c chart in process control.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit15">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 15</div>
+          <h2 class="unit-title">Bayesian Statistics: fundamental principles of Bayesian statistics, Bayes&#x27; theorem, Bayesian concepts and inference, Bayes estimates using decision theory and loss functions</h2>
+          <span class="unit-count" id="count-unit15"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.20 What is the fundamental principle of Bayesian statistics?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.21 Elaborate on Bayes&#x27; theorem and provide a real-world scenario where it can be applied effectively.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.28 Discuss Bayesian concepts and inferences in statistical analysis.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.30 Describe How Bayes Estimates are Derived Using the Decision Theory Framework, Including the Role of Loss Functions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unit-section" id="unit16">
+        <div class="unit-header">
+          <div class="unit-badge">Unit 16</div>
+          <h2 class="unit-title">Statistical Software: statistical software tools, features of SPSS, Data Analysis ToolPak in Microsoft Excel, advantages of R-Studio</h2>
+          <span class="unit-count" id="count-unit16"></span>
+        </div>
+        <div class="questions-grid">
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q1</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q.10 Name some statistical software tools used in analysis.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p1">
+            <div class="q-meta">
+              <span class="q-num">Q2</span>
+              <div class="q-tags"><span class="tag tag-p1">DECAP790</span></div>
+            </div>
+            <div class="q-body">
+              <p>Q7 What are the major features of SPSS?</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q3</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.25 Explain the role of the Data Analysis Tool Pack in Microsoft Excel. Provide examples of situations where it can be particularly useful for data analysis tasks.</p>
+            </div>
+          </div>
+          <div class="q-card" data-paper="p2">
+            <div class="q-meta">
+              <span class="q-num">Q4</span>
+              <div class="q-tags"><span class="tag tag-p2">DECAP790 QB</span></div>
+            </div>
+            <div class="q-body">
+              <p>Long Q.27 Describe the advantages of using R-Studio for statistical analysis, including any unique features or packages it offers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+  <footer class="site-footer"><div class="footer-inner">
+    <p>DECAP790 — Probability and Statistics | Question Bank</p>
+    <p class="footer-note">All questions organized by unit from 2 past papers. Note: the question-list source file is headed “DECAP780” — a typo in the source; the course name and content are Probability and Statistics (DECAP790). Long Q.13 and Long Q.14 are identical in the source list and both are kept.</p>
+  </div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
